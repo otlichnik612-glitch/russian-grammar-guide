@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f6f1e8;
+    color: #1c2430;
+  }
+
+  body {
+    min-height: 100dvh;
+    font-family: "Atkinson Hyperlegible", "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    background: #f6f1e8;
+    color: #1c2430;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: Fraunces, "Palatino Linotype", "Book Antiqua", serif;
+    text-wrap: balance;
+    line-height: 1.2;
+    color: #1c2430;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 3px solid #1a6f68;
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: #cfe8df;
+    color: #1c2430;
+  }
+
+  mark {
+    background: #cfe8df;
+    color: #1c2430;
+  }
+}
+
+@layer components {
+  .ending-mark {
+    background: #cfe8df;
+    color: #1c2430;
+    font-weight: 700;
+    padding: 0 0.12em;
+    border-radius: 0.2em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    overflow: visible;
+    white-space: normal;
+    left: 0.75rem;
+    top: 0.75rem;
+    z-index: 50;
+    border-radius: 999px;
+    background: #1a6f68;
+    color: #f6f1e8;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-enter {
+  animation: fade-up 200ms ease-out both;
+}
