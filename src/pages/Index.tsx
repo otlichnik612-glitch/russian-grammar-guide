@@ -22,7 +22,11 @@ const TINTS: Record<PartOfSpeech, string> = {
 
 export default function Index() {
   return (
-    <main id="main" lang="en" className="mx-auto w-full max-w-lg px-4 py-8 sm:px-6">
+    <main
+      id="main"
+      lang="en"
+      className="mx-auto flex min-h-[calc(100dvh-4.75rem)] w-full max-w-lg flex-col px-4 py-8 sm:px-6"
+    >
       <h1 className="font-display text-4xl font-semibold tracking-tight">
         Russian Grammar Guide
       </h1>
@@ -50,6 +54,11 @@ export default function Index() {
           })}
         </ul>
       </nav>
+
+      <footer className="mt-auto pt-10 text-center text-[0.7rem] leading-snug text-ink-soft">
+        <p>© 2026 s.p.language</p>
+        <p>All rights reserved</p>
+      </footer>
     </main>
   );
 }
