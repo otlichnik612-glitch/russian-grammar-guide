@@ -4,6 +4,16 @@ Interactive trainer for Russian noun, adjective, verb, numeral and pronoun endin
 
 English interface. Russian words are marked with `lang="ru"`.
 
+## Live
+
+- GitHub Pages: https://otlichnik612-glitch.github.io/russian-grammar-guide/
+- Netlify (one click from this repo): [Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/otlichnik612-glitch/russian-grammar-guide)
+
+Netlify settings if you connect the repo by hand:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+
 ## Run locally
 
 ```bash
